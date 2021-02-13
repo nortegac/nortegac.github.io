@@ -3,104 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Nicolás Ortega</title>
 </head>
 <body>
     <!--Encabezado con título y foto-->
-    <header>
-        <h1 id="inicio">Nicolás Ortega</h1>
-        <img src="https://i.ibb.co/BZJfW1K/20210131-152611.jpg" alt="20210131-152611" border="0">
+    <header  id="banner">
+        <h1 id="title">Nicolás Ortega Caicedo</h1>
+        <img id="fotoPersonal" src="img/foto.jpg" alt="Foto personal" border="0">
     </header>
+
     <!--Barra de navegación-->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#bienvenida">Bienvenida</a>
-        <a href="#bio">Datos biográficos</a>
-        <a href="#infoac">Datos académicos</a>
-        <a href="#sites">Sitios de interés</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="navbar  navbar-expand-md justify-content-center bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#title" >Home</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#about">About me</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#academia">Academy & work</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#proyectos">Projects</a>
+            </li>
+        </ul>
     </nav>
+
     <!--Contenido principal-->
     <main>
-        <!--Bienvenida-->
-        <section id="bienvenida">
-            <h3>Bienvenido</h3>
-            <p>Bienvenido a la página personal de Nicolás Ortega, estudiante de Ingeniería de Sistemas de la Universidad de los Andes. Saludos.</p>
+        <!--Info personal-->
+        <section class="container-fluid row align-items-center justify-content-center" id="about">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>About me</h2>
+                    <p>
+                        Hello! My name is Nicolás Ortega, I am from Bogotá, I am 20 years old and I am currently a Computer and Systems Engineering student at the Universidad de los Andes.
+                    </p>
+                    <p>
+                        I also study Industrial Engineering, I am interested in topics related to optimization of operations and data analysis. I would like to work as a full time developer or in data mining.
+                    </p>
+                </div>
+                <div class="col-md-6 social">
+                    <a href="https://www.facebook.com/nicolas.ortegac1/" class="fa fa-facebook mx-5" target="_blank"></a>
+                    <a href="https://twitter.com/NicolasOrtega01" class="fa fa-twitter mx-5" target="_blank"></a>
+                    <a href="https://www.instagram.com/nicolas_ortega1/" class="fa fa-instagram mx-5" target="_blank"></a>
+                </div>
+            </div>
         </section>
-        <!--Información biográfica-->
-        <section id="bio">
-            <h3>Información biográfica</h3>
-            <table border="1">
-                <tr>
-                    <th>Nombre completo</th>
-                    <td>Nicolás Ortega Caicedo</td>
-                </tr>
-                <tr>
-                    <th>Fecha de nacimiento</th>
-                    <td>10 de septiembre del 2000</td>
-                </tr>
-                <tr>
-                    <th>Ciudad de origen</th>
-                    <td>Bogotá, Colombia</td>
-                </tr>
-                <tr>
-                    <th>Edad</th>
-                    <td>20 años</td>
-                </tr>
-            </table>
-        </section>
-        <!--Información académica-->
-        <section id="infoac">
-            <h3>Información académica</h3>
-            <ul>
-                <li>Egresado del Colegio Corazonista</li>
-                <li>Estudiante de sexto semestre de la Universidad de los Andes</li>
-                <li>Programa principal: Ingeniería de Sistemas y Computación</li>
-                <li>Doble programa: Ingeniería Industrial</li>
-            </ul>
-        </section>
-        <!--Sitios de interés-->
-        <section id="sites">
-            <h3>Sitios de interés</h3>
-            <h4>Video destacado</h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/lalnGhxT3PQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>Foto destacada</h4>
-            <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F403/production/_109476426_jheison3.png">
-            <h4><a href="https://www.netflix.com/browse" target="_blank">Enlace destacado</a></h4>
-        </section>
-        <!--Formulario de contacto-->
-        <section id="contacto">
-            <h3>Contacto</h3>
-            <form action="" method="post">
-                <table>
-                    <tr>
-                        <td><li><label for="name">Nombre:</label></li></td>
-                        <td><input type="text" id="name" name="user_name"></td>
-                    </tr>
-                    <tr>
-                        <td><li><label for="mail">Correo electrónico:</label></li></td>
-                        <td><input type="email" id="mail" name="user_email"></td>
-                    </tr>
-                    <tr>
-                        <td><li><label for="msg">Mensaje:</label></li></td>
-                        <td><textarea id="msg" name="user_message"></textarea></td>
-                    </tr>
-                </table>
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </section>
-    </main>
-    <hr>
-    <footer>
-        <p>
-            Nicolás Ortega 2021.<br>Enviar un mensaje a <a href="mailto:n.ortegac@uniandes.edu.co">n.ortega@uniandes.edu.co</a>
-        </p>
-        <p>
-            Página de Facebook:<br>
-            <a href="https://www.facebook.com/nicolas.ortegac1/" target="_blank">Facebook</a>
-        </p>
-        
-    </footer>
 
+        <!--Formación académica-->
+        <section class="container-fluid row align-items-center justify-content-center" id="academia">
+            <div class="row align-items-center">
+                <h2>Academic information & work experience</h2>
+            </div>
+            <div class="row" id="academia">
+                <div class="col-md-3 social">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/colegio.png" class="card-img-top" alt="Corazonista School">
+                        <div class="card-body">
+                          <p class="card-text">Corazonista School — Basic education</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 social">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/uniandes.png" class="card-img-top" alt="Universidad de los Andes">
+                        <div class="card-body">
+                          <p class="card-text">Universidad de los Andes — Industrial Engineering Undergraduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 social">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/uniandes2.png" class="card-img-top" alt="Universidad de los Andes">
+                        <div class="card-body">
+                          <p class="card-text">Universidad de los Andes — Software Engineering Undergraduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 social">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/sistrans.png" class="card-img-top" alt="Chalkboard">
+                        <div class="card-body">
+                          <p class="card-text">Transactional Systems Monitor — 2020-20 and 2021-10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Habilidades, intereses-->
+        <section class="container-fluid row align-items-center justify-content-center" id="skills">
+            <div class="row align-items-center">
+                <h2>Skills</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 social ">
+                    <img src="img/267_Python-512.png" class="rounded lenguajesImg" alt="...">
+                </div>
+                <div class="col-md-4 social ">
+                    <img src="img/java.png" class="rounded lenguajesImg" alt="...">
+                </div>
+                <div class="col-md-4 social ">
+                    <img src="img/sql.png" class="rounded lenguajesImg" alt="...">
+                </div>
+            </div>
+            <p class="text-center"><br>Decent programming skills in Java, Python & SQL</p>
+        </section>
+
+        <!--Proyectos-->
+        <section class="container-fluid row align-items-center justify-content-center" id="proyectos">
+            <div class="row align-items-center">
+                <h2>Some projects</h2>
+            </div>
+            <div class="row" id="proyectos">
+                <div class="col-md-6 social ">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="img/finandino.png" class="projectImg" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">FinAndino</h5>
+                              <p class="card-text">Project made during freshman year for "ExpoAndes" (2018)</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 social ">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="img/arquisoft.jpeg" class="projectImg" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Booklick Architecture Design</h5>
+                              <p class="card-text">Software architecture design project made for Booklick (2020)</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Multimedia-->
+        <section class="container-fluid row align-items-center justify-content-center" id="multimedia">
+            <div class="row align-items-center">
+                <h2>Recommended media</h2>
+            </div>
+            <div class="row" id="multimedia2">
+                <div class="col-md-6 social ">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mDbDR8GosUU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 social ">
+                    <iframe src="https://open.spotify.com/embed/track/6uJwPeBGb3swi85TSr9iIz" width="300" height="315" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer class="footer bg-dark justify-content-center">
+        <small class="text-center footer">Programación con Tecnologías Web — 2021</small><br>
+        <small class="text-center footer">Universidad de los Andes</small><br>
+        <small class="text-center footer">Contact: <a href="mailto:n.ortegac@uniandes.edu.co">n.ortega@uniandes.edu.co</a></small>
+    </footer>
 </body>
 </html>
